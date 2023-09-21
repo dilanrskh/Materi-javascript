@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika</title>
+</head>
+<body>
+    <h1>Operator Logika</h1>
+    <h2 id="logika"></h2>
+
+    <!-- Operator Logika ada 3 : &&, ||, ! = negasi   -->
+    <script>
+        let nama = "dilaaa";
+        let email = "dila@gmail.com";
+        let pass = "1234";
+        let hasil;
+
+        // if(email == "dila@gmail.com" || pass == "1234" ){
+        //     hasil = "Selamat datang " + nama;
+        // }else{
+        //     hasil = "Yhaaa ngak bisa masuk";
+        // }
+
+        // ! = negasi
+
+        if(!(email == "dilaa@gmail.com" || pass == "12345")){
+            hasil = "betul";
+        }else{
+            hasil = "Salah";
+        }
+
+
+        document.getElementById("logika").innerHTML = hasil;
+
+    </script>
+
+</body>
+</html>

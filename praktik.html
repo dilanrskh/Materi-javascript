@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik Javascript</title>
+
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/92/2a/c1/922ac1910d11b60f23de87839f6505a8.jpg">
+
+    <style>
+    </style>
+
+    <style>
+       table{
+        border-collapse: collapse;
+        border: 1px solid black;
+        width: 80%;
+        margin: auto;
+        padding: auto;
+        margin-top: 20px;
+    }
+    th{
+        background-color: lightpink;
+        color: black;
+        padding: 10px;
+    }
+    td{
+        padding: 8px;
+        
+    }
+    .no{
+        text-align: center;
+    }
+
+    tr:hover{
+        background-color: lightskyblue;
+        cursor: pointer;
+    }
+    
+    .tc{
+        text-align: center;
+    }
+   
+    </style>
+</head>
+
+    <h1 style="text-align: center; margin-bottom: 40px;">Praktek HTML dan Javascript</h1>
+
+    <table border="1">
+        <tr>
+            <th width="5%">No</th>
+            <th width="20%">Nama</th>
+            <th width="20%">Score Game</th>
+        </tr>
+        <tr>
+            <td class="no">1</td>
+            <td>Aldi</td>
+            <td class="tc" id="aldi"></td>
+        </tr>
+        <tr>
+            <td class="no">2</td>
+            <td>Fadli</td>
+            <td class="tc" id="fadli"></td>
+        </tr>
+        <tr>
+            <td class="no">3</td>
+            <td>Rudi</td>
+            <td class="tc" id="rudi"></td>
+        </tr>
+        <tr>
+            <td class="no">4</td>
+            <td>Yanto</td>
+            <td class="tc" id="yanto"></td>
+        </tr>
+        <tr style="font-weight: bold;">
+            <td colspan="2" style="text-align: right ;">Total Nilai</td>
+            <td colspan="2" class="tc" id="hasilnilai"></td>
+        </tr>
+        <tr style="font-weight: bold;">
+            <td colspan="2" style="text-align: right ;">Nilai Rata Rata</td>
+            <td colspan="2" class="tc" id="nilairata"></td>
+        </tr>
+    </table>
+
+
+    <table border="1">
+        <tr>
+            <th>Kesimpulan</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;" id="nilaisama"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" id="nilaitinggi"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" id="lolos"></td>
+        </tr>
+    </table>
+
+    <script>
+        var nilai = {
+            aldi: 96,
+            fadli : 98,
+            rudi :  97,
+            yanto : 97
+        }
+        // Keluarin Output Nilai
+        document.getElementById("aldi").innerHTML = nilai.aldi;
+        document.getElementById("fadli").innerHTML = nilai.fadli;
+        document.getElementById("rudi").innerHTML = nilai.rudi;
+        document.getElementById("yanto").innerHTML = nilai.yanto;
+        
+        // Ngitung jumlah nilai
+        var hsl = nilai.aldi + nilai.fadli + nilai.rudi + nilai.yanto;
+        var rata = hsl / 4;
+    
+
+        document.getElementById("hasilnilai").innerHTML = hsl;
+        document.getElementById("nilairata").innerHTML = rata.toFixed(4);
+
+        // Nilai yang sama
+        if(nilai.rudi == nilai.yanto){
+            document.getElementById("nilaisama").innerHTML = "Nilai Rudi dan Yanto sama";
+        }else{
+            document.getElementById("nilaisama").innerHTML = "";
+        }
+
+        // Nilai tertinggi
+        if(nilai.fadli > nilai.aldi) {
+            document.getElementById("nilaitinggi").innerHTML = "Nilai Fadli lebih besar daripada Aldi";
+        }else{
+            document.getElementById("nilaitinggi").innerHTML ="";
+        }
+
+        // Lolos ke babak selanjutnya
+        
+        if(nilai.fadli >= 97  && nilai.rudi >= 97 && nilai.yanto >= 97){
+            document.getElementById("lolos").innerHTML = "Fadli, Rudi dan Yanto Lolos kebabak selanjutnya"
+        }else{
+            document.getElementById("lolos").innerHTML= "Tidak lolos";
+        }
+
+    </script>
+ 
+</body>
+</html>

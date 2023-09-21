@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Tipe Data</title>
+</head>
+<body>
+    <h1>Tipe Data Javascript</h1>
+    <!-- String = Teks 
+    Number = Nomor
+    Boolean = True atau False 
+    Array = Banyak data -->
+    <h2 id="number"></h2>
+    <h2 id="string"></h2>
+    <h2 id="boolean"></h2>
+    <h2 id="array"></h2>
+
+    <script>
+
+        var dataNumber = 404;
+        const typeData = typeof dataNumber;
+
+        console.log(dataNumber);
+        document.getElementById("number").innerHTML = typeData;
+
+        // escape character 
+        // \' -> '
+        // \" => ""
+        // \n -> enter atau line baru
+        // \t -> tab
+        // \b -> simbol kotak
+        // \u00AE -> buletan R
+        var dataString = 'Mahasiswi programmer hari jum\'at';
+        // repeat(3) -> ngulang atau ngebanyakin
+        // toUpperCase() -> Huruf kapital semua
+        // toLowerCase() -> Biar huruf kecil semua
+        // lenght -> ngitung ada berapa huruf
+        // slice -> buat potong
+
+        // console.log(dataString.replace("m", "l"));
+        document.getElementById("string").innerHTML = dataString;
+
+        // Boolean -> true atau false
+        var dataBoolean = true;
+
+        console.log(dataBoolean);
+        document.getElementById("boolean").innerHTML = dataBoolean;
+
+        // Array -> bisa nyimpan banyak data apapun tipe nya 
+        var dataArray = ["dila", 2, true, 40.5, null];
+
+        console.log(dataArray);
+        document.getElementById("array").innerHTML = dataArray[1] = 4;
+
+    </script>
+
+</body>
+</html>
